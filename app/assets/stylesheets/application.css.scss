@@ -1,0 +1,27 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.user-info{
+  margin-top: 12px;
+}
+
+.nav{
+  margin-top: 5px;
+}
+
+// About //
+#about_header{
+  font-size: 40pt;
+  margin: 10px;
+  text-align: center;
+}
+
+#about_info{
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+#about_sign_up{
+  text-align: center;
+}

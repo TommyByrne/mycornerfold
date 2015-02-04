@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-12">
+      <h1 id= "about_header"> <i class="fa fa-bookmark fw"> </i>MyCornerFold</h1>
+    <div id= "about_info">
+      <div class="col-md-4">
+        <i class="fa fa-sitemap fa-4x"></i>
+        <h3>Organize</h3>
+          <p class='lead'>
+            Your bookmark list can become long and overwelling. Becoming very
+            unproductive and inefficient. MyCornerFold helps make your daily web
+            experince awesome by organizing your bookmarks into topics for a
+            quick guide to all your favorite sites.
+          </p>
+      </div>
+      <div class="col-md-4">
+        <i class="fa fa-search fa-4x"></i>
+        <h3>Explore</h3>
+          <p class='lead'>
+            Not only do you have access to your bookmarks but now
+            you can check out  what others think is worth bookmarking
+            by seeing all the topics that other users have added.
+          </p>
+      </div>
+      <div class="col-md-4">
+        <i class="fa fa-thumbs-o-up fa-4x"></i>
+        <h3>Discover</h3>
+          <p class='lead'>
+            Experience more on the web by not only exploring what other users have
+            set as there bookmarks. But by liking theres you can update your bookmarks
+            to have quick asccess to all your new favorite site
+            you never knew existed.
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <% unless current_user %>
+      <div id= "about_sign_up">
+        <p><%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
+    <% else %>
+      <p><%= link_to "Explore", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
