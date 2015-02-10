@@ -1,0 +1,5 @@
+<h1>All Bookmarks</h1>
+
+<% @topic.each do |topic| %>
+<h3><%= link_to topic.hashtag, topic %><br/></h3>
+<% end %>

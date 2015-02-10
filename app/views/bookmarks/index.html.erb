@@ -1,0 +1,10 @@
+<%= link_to "New Bookmark", new_bookmark_path, class: 'btn btn-success' %>
+
+<div class="row">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="col-md-3 thumbnail">
+      <%= link_to(image_tag(bookmark.thumbnail_url), bookmark.url, class: "thumbnail thumb", target: "_blank" ) %>
+      <p><%= bookmark.title %></p>
+    </div>
+  <% end %>
+</div>

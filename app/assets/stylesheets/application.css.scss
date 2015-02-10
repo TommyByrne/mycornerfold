@@ -6,7 +6,7 @@
 }
 
 .nav{
-  margin-top: 5px;
+  margin-top:  5px;
 }
 
 // About //
@@ -24,4 +24,23 @@
 
 #about_sign_up{
   text-align: center;
+}
+
+// Thumbnail //
+
+.thumbnail{
+  height: 200px;
+  width: 200px;
+  margin: 15px;
+  text-align: center;
+  overflow: auto;
+}
+
+.thumb{
+  height: 100px;
+  width: 100px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
 }
