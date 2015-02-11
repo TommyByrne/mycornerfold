@@ -1,2 +1,9 @@
-<h1>Topics#new</h1>
-<p>Find me in app/views/topics/new.html.erb</p>
+<h1>New Topic</h1>
+  <%= form_for @topic do |f| %>
+    <div class="form-group">
+      <%=f.label :topic %><br/>
+      <%=f.text_field :title, class: 'form_control', placeholder: "Enter Topic here" %>
+      <br/>
+    </div>
+      <%= f.submit "Save", class: 'btn btn-success' %>
+  <% end %>

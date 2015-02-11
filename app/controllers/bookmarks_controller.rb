@@ -1,28 +1,29 @@
 class BookmarksController < ApplicationController
-  require 'link_thumbnailer'
 
   def index
     @bookmarks = Bookmark.all
   end
 
   def show
+    # @topic     = Topic.find(params[:topic_id])
     @bookmarks = Bookmark.find(params[:id])
   end
 
   def new
+    # @topic    = Topic.find(params[:topic_id])
     @bookmark = Bookmark.new
-    # topic
   end
 
   def create
-    @bookmark = Bookmark.build_card(bookmark_params)
-    # @bookmar.topic =
+    # @topic          = Topic.find(params[:topic_id])
+    @bookmark       = Bookmark.build_card(bookmark_params)
+    @bookmark.topic = @topic
     @bookmark.save!
       flash[:notice] = "Your bookmark was created successfully."
       redirect_to @bookmark
-  rescue
-      flash[:error] = "URL is not valid"
-      redirect_to :back
+  # rescue
+  #     flash[:error] = "URL is not valid"
+  #     redirect_to :back
   end
 
   def destroy
@@ -37,10 +38,12 @@ class BookmarksController < ApplicationController
   end
 
   def edit
+    # @topic    = Topic.find(params[:topid_id])
     @bookmark = Bookmark.find(params[:id])
   end
 
   def update
+    # @topic    = Topic.find(params[:topic_id])
     @bookmark = Bookmark.find(params[:id])
     if @bookmark.update_attributes(bookmark_params)
       flash[:notice] = "Bookmark was updated successfully."
