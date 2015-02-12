@@ -1,6 +1,6 @@
 class Bookmark < ActiveRecord::Base
   belongs_to :topic
-  accepts_nested_attributes_for :topic
+  has_many :likes, dependent: :destroy
 
   def self.build_card(params)
     bookmark = new(params)

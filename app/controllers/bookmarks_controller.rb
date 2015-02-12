@@ -11,17 +11,17 @@ class BookmarksController < ApplicationController
   end
 
   def new
-    @topic = Topic.find_or_create_by(params[:topic_id])
+    @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.new
-    authorize @bookmark
+    # authorize @bookmark
   end
 
   def create
-    @topic          = Topic.find_or_create_by(params[:topic_id])
+    @topic          = Topic.find(params[:bookmark][:topic_id])
     @bookmark       = Bookmark.build_card(bookmark_params)
     @bookmark.topic = @topic
     @bookmarks = @topic.bookmarks
-    authorize @bookmark
+    # authorize @bookmark
 
     @bookmark.save!
       flash[:notice] = "Your bookmark was created successfully."

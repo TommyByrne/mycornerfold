@@ -1,8 +1,9 @@
-<h1>New Bookmark</h1>
+<h1>New Bookmark for <%= @topic.title %></h1>
   <%= form_for @bookmark do |f| %>
     <div class="form-group">
       <%=f.label :address %><br/>
       <%=f.text_field :url, class: 'form_control', placeholder: "Enter URL here" %>
+      <%=f.hidden_field :topic_id, :value => @topic.id %>
       <br/>
       <small>Format: http://wwww.example.com </small>
     </div>
