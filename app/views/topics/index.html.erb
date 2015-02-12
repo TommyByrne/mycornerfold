@@ -1,6 +1,19 @@
 <h1>All Bookmarks</h1>
 <%= link_to "New Topic", new_topic_path, class: "btn btn-success" %>
 
-<% @topic.each do |topic| %>
-<h3><%= link_to topic.hashtag, topic %><br/></h3>
+<% @topics.each do |topic| %>
+  <div class="row">
+    <div class="col-md-8">
+      <h3><%= link_to topic.hashtag, topic %><br/></h3>
+      <%= link_to "Add Bookmark", new_bookmark_path, class: "btn btn-success" %>
+    </div>
+  </div>
+  <div class="row">
+    <% topic.bookmarks.each do |bookmark| %>
+      <div class="col-md-2 thumbnail">
+        <%= link_to(image_tag(bookmark.thumbnail_url), bookmark.url, class: "thumbnail thumb", target: "_blank" ) %>
+       <p><%= bookmark.title %></p>
+      </div>
+    <% end %>
+  </div>
 <% end %>

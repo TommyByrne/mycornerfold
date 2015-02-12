@@ -1,11 +1,12 @@
 class TopicsController < ApplicationController
+
   def index
-    @topic = Topic.all
+    @topics = Topic.all
   end
 
   def show
     @topic = Topic.find(params[:id])
-    @bookmarks = @topic.bookmarks
+
   end
 
   def new
@@ -13,8 +14,10 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = current_user.topic.build(topic_params)
-    if @topic.save?
+    @user = current_user
+    @topic = @user.topics.new(topic_params)
+    # @topic = current_user.topic.build(topic_params)
+    if @topic.save
       flash[:notice]= "Topic was Created"
       redirect_to @topic
     else

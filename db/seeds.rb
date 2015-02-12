@@ -24,6 +24,7 @@ users = User.all
 # Create Topics
 10.times do
   Topic.create!(
+    user: users.sample,
     title: Faker::Lorem.word
     )
 end
