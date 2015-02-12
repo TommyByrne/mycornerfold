@@ -11,6 +11,11 @@
   <div class="row">
     <% topic.bookmarks.each do |bookmark| %>
       <div class="col-md-2 thumbnail">
+        <div class="delete-book">
+          <%= link_to bookmark, method: :delete, data: { confirm: "Are you sure?"} do %>
+            <i class="fa fa-trash-o"></i>
+          <% end %>
+        </div>
         <% if bookmark.thumbnail_url != nil  %>
           <%= link_to(image_tag(bookmark.thumbnail_url), bookmark.url, class: "thumbnail thumb", target: "_blank" ) %>
         <% else %>

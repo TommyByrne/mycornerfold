@@ -32,29 +32,28 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.find(params[:id])
-    authorize @bookmark
+    # authorize @bookmark
 
     if @bookmark.destroy
       flash[:notice] = "Your bookmark was deleted successfully."
-      redirect_to bookmarks_path
+      redirect_to topics_path
     else
       flash[:error] = "There was an error deleting the bookmark."
-      redirect_to @bookmark
+      redirect_to topics_path
     end
   end
 
   def edit
     # @topic    = Topic.find(params[:topid_id])
     @bookmark = Bookmark.find(params[:id])
-    authorize @bookmark
+    # authorize @bookmark
   end
 
   def update
     # @topic    = Topic.find(params[:topic_id])
     @bookmark = Bookmark.find(params[:id])
-    authorize @bookmark
+    # authorize @bookmark
 
     if @bookmark.update_attributes(bookmark_params)
       flash[:notice] = "Bookmark was updated successfully."
