@@ -22,3 +22,22 @@
 </div>
 
 <h1>Liked Bookmarks</h1>
+  <% @likes.each do |like| %>
+    <div class="col-md-2 thumbnail">
+      <div class="delete-book">
+        <%= link_to like.bookmark, method: :delete, data: { confirm: "Are you sure?"} do %>
+          <i class="fa fa-trash-o"></i>
+        <% end %>
+      </div>
+      <% if like.bookmark.thumbnail_url != nil  %>
+        <%= link_to(image_tag(like.bookmark.thumbnail_url), like.bookmark.url, class: "thumbnail thumb", target: "_blank" ) %>
+      <% else %>
+        <%= link_to(image_tag('book.png'), like.bookmark.url, class: "book", target: "_blank" ) %>
+      <% end %>
+        <p><%= like.bookmark.title %></p>
+        <div class="likes">
+        <%= render partial: 'likes/like', locals: { bookmark: like.bookmark } if current_user %>
+      </div>
+    </div>
+  <% end %>
+</div>
