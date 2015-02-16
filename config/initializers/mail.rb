@@ -4,7 +4,7 @@
     address:           'smtp.mailgun.org',
     user_name:         ENV['MAILGUN_SMTP_LOGIN'],
     password:          ENV['MAILGUN_SMTP_PASSWORD'],
-    domain:            'tbyrne-blocmarks.herokuapp.com',
+    domain:            'mycornerfold.herokuapp.com',
     authentication:    :plain,
     content_type:      'text/html'
   }
