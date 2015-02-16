@@ -20,15 +20,16 @@ class BookmarksController < ApplicationController
     @topic          = Topic.find(params[:bookmark][:topic_id])
     @bookmark       = Bookmark.build_card(bookmark_params)
     @bookmark.topic = @topic
+    @bookmark.user  = current_user
     @bookmarks = @topic.bookmarks
     # authorize @bookmark
 
     @bookmark.save!
       flash[:notice] = "Your bookmark was created successfully."
       redirect_to @topic
-  rescue
-      flash[:error] = "URL is not valid"
-      redirect_to :back
+  # rescue
+  #     flash[:error] = "URL is not valid"
+  #     redirect_to :back
   end
 
   def destroy

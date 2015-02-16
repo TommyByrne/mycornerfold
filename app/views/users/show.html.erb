@@ -1,0 +1,24 @@
+<h1>My Bookmarks</h1>
+
+<div class="row">
+  <% @user.bookmarks.each do |bookmark| %>
+    <div class="col-md-2 thumbnail">
+      <div class="delete-book">
+        <%= link_to bookmark, method: :delete, data: { confirm: "Are you sure?"} do %>
+          <i class="fa fa-trash-o"></i>
+        <% end %>
+      </div>
+      <% if bookmark.thumbnail_url != nil  %>
+        <%= link_to(image_tag(bookmark.thumbnail_url), bookmark.url, class: "thumbnail thumb", target: "_blank" ) %>
+      <% else %>
+        <%= link_to(image_tag('book.png'), bookmark.url, class: "book", target: "_blank" ) %>
+      <% end %>
+     <p><%= bookmark.title %></p>
+      <div class="likes">
+        <%= render partial: 'likes/like', locals: { bookmark: bookmark } if current_user %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<h1>Liked Bookmarks</h1>
