@@ -10,7 +10,7 @@ class IncomingController < ApplicationController
       topic.save!
     end
 
-    bookmark = Bookmark.new(url: params["body-plain"], topic: @topic)
+    @bookmark = Bookmark.create(url: params["body-plain"], topic: @topic)
     bookmark.save!
 
 

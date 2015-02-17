@@ -1,9 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+body{
+  background-color: #DADFE1;
+
+}
 
 .user-info{
   margin-top: 12px;
 }
+// .navbar{
+//   background-color:#E74C3C;
+// }
 
 .nav{
   margin-top:  5px;
@@ -32,6 +39,7 @@
   height: 200px;
   width: 200px;
   margin: 15px;
+  background-color: #D2D7D3;
   text-align: center;
   overflow: auto;
 }
@@ -56,4 +64,19 @@
 
 .likes{
   text-align: center;
+}
+
+// Welcome //
+
+.welcome-img{
+  background: image-url("bookmark.jpg") no-repeat ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.welcome{
+  opacity: 1;
+  height: auto;
 }
