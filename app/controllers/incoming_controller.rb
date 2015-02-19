@@ -16,7 +16,7 @@ class IncomingController < ApplicationController
     end
 
     @bookmark = Bookmark.new(url: params["stripped-text"], user: @user, topic: @topic)
-    bookmark.save!
+    @bookmark.save!
     head 200
   rescue => e
     puts "failed because #{e}"
