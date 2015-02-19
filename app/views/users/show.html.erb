@@ -1,4 +1,6 @@
-<h1>My Bookmarks</h1>
+<div class="center">
+  <h1 class="top-title">My Bookmarks</h1>
+</div>
 
 <div class="row">
   <% @user.bookmarks.each do |bookmark| %>
@@ -21,7 +23,9 @@
   <% end %>
 </div>
 
-<h1>Liked Bookmarks</h1>
+<div class="center">
+  <h1 class="top-title">Liked Bookmarks</h1>
+</div>
   <% @likes.each do |like| %>
     <div class="col-md-2 thumbnail">
       <div class="delete-book">

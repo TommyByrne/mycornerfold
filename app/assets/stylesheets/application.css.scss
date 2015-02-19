@@ -2,20 +2,34 @@
 @import "bootstrap";
 body{
   background-color: #DADFE1;
-
 }
 
 .user-info{
   margin-top: 12px;
 }
-// .navbar{
-//   background-color:#E74C3C;
-// }
+
+.nav-hover:hover{
+  color: #FFF;
+  background-color: #22A7F0;
+}
+
+.btn-primary{
+  background-color: #22A7F0;
+}
 
 .nav{
   margin-top:  5px;
 }
 
+// Landing //
+
+.center{
+  text-align: center;
+}
+
+.top-title{
+  font-size: 8rem;
+}
 // About //
 #about_header{
   font-size: 40pt;

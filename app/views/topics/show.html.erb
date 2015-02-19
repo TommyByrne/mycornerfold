@@ -1,5 +1,7 @@
-<h1><%= @topic.title.capitalize %></h1>
-<%= link_to "Add Bookmark", new_bookmark_path(topic_id: @topic.id), class: "btn btn-success" %>
+<div class="center">
+  <h1 class="top-title"><%= @topic.title.capitalize %></h1>
+  <%= link_to "Add Bookmark", new_bookmark_path(topic_id: @topic.id), class: "btn btn-success" %>
+</div>
 
 <div class="row">
     <% @topic.bookmarks.each do |bookmark| %>
