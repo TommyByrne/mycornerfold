@@ -11,5 +11,6 @@ class ThumbnailService
 
   def url
     object.images.first.src.to_s
+    #how to define url if src is nil?
   end
 end

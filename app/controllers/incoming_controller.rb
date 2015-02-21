@@ -5,7 +5,7 @@ class IncomingController < ApplicationController
     @user = User.where(email: params['sender']).take
     @topic = Topic.where(title: params['subject']).take
 
-    unless @topic
+    unless @topic #if topic not created then topic created and bookmark not on view
       topic = Topic.new(title: params['subject'])
       topic.save!
     end

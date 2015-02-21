@@ -1,13 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 body{
-  background-color: #DADFE1;
+  color: white;
+  background-color: #5E5E5E;
+}
+
+.sec{
+  padding-top: 80px;
+}
+
+.header1{
+  padding-top: 20px;
+  font-size: 7rem;
 }
 
 .user-info{
   margin-top: 12px;
 }
 
+.sign{
+  margin-right: 20px;
+}
 .nav-hover:hover{
   color: #FFF;
   background-color: #22A7F0;
@@ -27,9 +41,34 @@ body{
   text-align: center;
 }
 
+
 .top-title{
   font-size: 8rem;
+  font-weight: 100;
 }
+
+.icon-h{
+  padding-top: 5px;
+  padding-bottom: 0px;
+  font-size: 3rem;
+}
+
+.icon-d{
+  text-align: center;
+}
+.intro-p{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.icon-c{
+  margin-top: 25px;
+  padding: 50px;
+  text-align: center;
+}
+
 // About //
 #about_header{
   font-size: 40pt;
@@ -54,6 +93,7 @@ body{
   width: 200px;
   margin: 15px;
   background-color: #D2D7D3;
+  color: black;
   text-align: center;
   overflow: auto;
 }

@@ -1,3 +1,4 @@
+<div class="sec">
 <div class="center">
   <h1 class="top-title"><%= @topic.title.capitalize %></h1>
   <%= link_to "Add Bookmark", new_bookmark_path(topic_id: @topic.id), class: "btn btn-success" %>
@@ -23,4 +24,4 @@
       </div>
     <% end %>
   </div>
-
+</div>
