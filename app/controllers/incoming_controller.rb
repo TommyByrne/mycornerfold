@@ -20,5 +20,4 @@ class IncomingController < ApplicationController
     puts "failed because #{e}"
     head 400
   end
-
 end
