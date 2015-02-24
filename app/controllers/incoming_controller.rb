@@ -6,8 +6,8 @@ class IncomingController < ApplicationController
     @topic = Topic.where(title: params['subject']).take
 
     unless @topic #if topic not created then topic created and bookmark not on view
-      topic = Topic.new(title: params['subject'])
-      topic.save!
+      @topic = Topic.new(title: params['subject'])
+      @topic.save!
     end
 
     @bookmark = Bookmark.build_card(url: params["stripped-text"])
