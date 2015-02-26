@@ -92,16 +92,16 @@ body{
 }
 
 a:link {
-  color: #FFFFFF;
+  color: #000000;
 }
 a:visited {
-  color: #FFFFFF;
+  color: #000000;
 }
 a:hover {
   color: #CCCCCC;
 }
 a:active {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 // Thumbnail //
@@ -111,7 +111,7 @@ a:active {
   width: 200px;
   margin: 15px;
   border: none;
-  background-color: #4B77BE;
+  background-color: #ffffff;
   color: black;
   text-align: center;
   overflow: auto;
@@ -137,19 +137,4 @@ a:active {
 
 .likes{
   text-align: center;
-}
-
-// Welcome //
-
-.welcome-img{
-  background: image-url("bookmark.jpg") no-repeat ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.welcome{
-  opacity: 1;
-  height: auto;
 }
