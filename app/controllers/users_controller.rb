@@ -5,7 +5,5 @@ class UsersController < ApplicationController
     @bookmarks = @user.bookmarks.group_by{ |b| b.topic}
     @likes = current_user.likes
     @topics = Topic.all
-
-
    end
 end
