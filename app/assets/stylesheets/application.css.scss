@@ -2,8 +2,8 @@
 @import "bootstrap";
 
 body{
-  color: black;
-  background-color: #5E5E5E;
+  background-color: #4B77BE;
+
 }
 
 .sec{
@@ -24,7 +24,7 @@ body{
 }
 .nav-hover:hover{
   color: #FFF;
-  background-color: #22A7F0;
+  background-color: #4B77BE;
 }
 
 .btn-primary{
@@ -79,11 +79,29 @@ body{
 #about_info{
   text-align: center;
   padding-top: 20px;
-  margin-bottom: 10px;
+  margin: 30px;
 }
 
 .about_sign_up{
   text-align: center;
+}
+
+.arrow-down{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link {
+  color: #FFFFFF;
+}
+a:visited {
+  color: #FFFFFF;
+}
+a:hover {
+  color: #CCCCCC;
+}
+a:active {
+  color: #FFFFFF;
 }
 
 // Thumbnail //
@@ -92,7 +110,8 @@ body{
   height: 200px;
   width: 200px;
   margin: 15px;
-  background-color: #D2D7D3;
+  border: none;
+  background-color: #4B77BE;
   color: black;
   text-align: center;
   overflow: auto;

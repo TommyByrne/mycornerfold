@@ -1,10 +1,11 @@
 <div class="sec">
-<div class="row">
-  <div class="col-md-12">
-      <h1 id= "about_header"> <i class="fa fa-bookmark fw"> </i>MyCornerFold</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 id="about_header"> <i class="fa fa-bookmark fw"></i> My Corner Fold</h1>
+
     <div id= "about_info">
       <div class="col-md-4">
-        <i class="fa fa-sitemap fa-4x"></i>
+        <i class="fa fa-sitemap fa-5x"></i>
         <h3>Organize</h3>
           <p class='lead'>
             Your bookmark list can become long and overwelling. Becoming very
@@ -14,12 +15,11 @@
           </p>
       </div>
       <div class="col-md-4">
-        <i class="fa fa-search fa-4x"></i>
-        <h3>Explore</h3>
+        <i class="fa fa-envelope fa-5x"></i>
+        <h3>Email</h3>
           <p class='lead'>
-            Not only do you have access to your bookmarks but now
-            you can check out  what others think is worth bookmarking
-            by seeing all the topics that other users have added.
+            Add any bookmark to your list by sending an email to  postmaster@app9e24e2a6f78b43e99ce818679a7eff17.mailgun.org
+            Placing the topic in the subject line and the URL in the email body. Making it quick and painless to update your email list.
           </p>
       </div>
       <div class="col-md-4">
@@ -42,11 +42,6 @@
       <div class= "about_sign_up">
         <p><%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
       </div>
-    <% else %>
-      <div class= "about_sign_up">
-      <p><%= link_to "Explore", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
-      </div>
     <% end %>
   </div>
-</div>
 </div>

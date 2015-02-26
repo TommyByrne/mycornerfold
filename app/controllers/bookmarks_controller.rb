@@ -23,9 +23,9 @@ class BookmarksController < ApplicationController
     @bookmark.save!
       flash[:notice] = "Your bookmark was created successfully."
       redirect_to @topic
-  # rescue
-  #     flash[:error] = "URL is not valid"
-  #     redirect_to :back
+  rescue
+      flash[:error] = "URL is not valid"
+      redirect_to :back
   end
 
   def destroy
